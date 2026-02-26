@@ -20,8 +20,8 @@ class Heap{
     std::vector<int> vdata; //store the binary heap tree as a dynamic array
 
     // helpers to restore heap property after insert/remove
-    void bubble_down(int index);
-    void bubble_up(int index);
+    void bubble_down(std::size_t index);
+    void bubble_up(std::size_t index);
 };
 
 #endif

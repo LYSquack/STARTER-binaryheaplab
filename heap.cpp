@@ -39,10 +39,10 @@ bool Heap::empty(){
     
 // helper implementations ----------------------------------
 
-void Heap::bubble_down(int index) {
-    int smallest = index;
-    int left = 2*index + 1;
-    int right = 2*index + 2;
+void Heap::bubble_down(std::size_t index) {
+    std::size_t smallest = index;
+    std::size_t left = 2*index + 1;
+    std::size_t right = 2*index + 2;
 
     if (left < vdata.size() && vdata[left] < vdata[smallest]) {
         smallest = left;
@@ -56,12 +56,12 @@ void Heap::bubble_down(int index) {
     }
 }
 
-void Heap::bubble_up(int index) {
-    if (index <= 0) {
+void Heap::bubble_up(std::size_t index) {
+    if (index == 0) {
       return;
     }
     while (index > 0) {
-      int parent = (index - 1) / 2;
+      std::size_t parent = (index - 1) / 2;
       if (vdata[index] < vdata[parent]) {
         std::swap(vdata[index], vdata[parent]);
         index = parent;
