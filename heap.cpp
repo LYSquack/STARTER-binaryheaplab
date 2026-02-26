@@ -52,12 +52,13 @@ void Heap::bubble_up(int index) {
       return;
     }
     while (index > 0) {
-        int parent = (index - 1) / 2;
-        if (vdata[index] < vdata[parent]) {
-            std::swap(vdata[index], vdata[parent]);
-            index = parent;
-        } else {
-            break;
-        }
+      int parent = (index - 1) / 2;
+      if (vdata[index] < vdata[parent]) {
+        std::swap(vdata[index], vdata[parent]);
+        index = parent;
+      } 
+      else {
+        break;
+      }
     }
 }
