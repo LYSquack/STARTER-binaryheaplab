@@ -15,7 +15,12 @@ class Heap{
     void pop(); // delete the min element 
     int top();
     bool empty();
-    Heap() = default; //default constructor
+    Heap(std::vector<int>::iterator start, std::vector<int>::iterator end) {
+         for (auto it = start; it != end; ++it) {
+            push(*it);
+         }
+    }
+
     
  private:
     std::vector<int> vdata; //store the binary heap tree as a dynamic array
